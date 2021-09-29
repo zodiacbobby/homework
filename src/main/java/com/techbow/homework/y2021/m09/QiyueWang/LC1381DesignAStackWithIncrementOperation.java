@@ -4,7 +4,7 @@ public class LC1381DesignAStackWithIncrementOperation {
     private int maxSize;
     private int[] stack;
     private int[] add;
-    private int pointer;
+    private int pointer; // point to the next pos, also as size
 
     public LC1381DesignAStackWithIncrementOperation(int maxSize) {
         this.maxSize = maxSize;
@@ -30,6 +30,10 @@ public class LC1381DesignAStackWithIncrementOperation {
         return res;
     }
 
+    public int peek(){
+        return stack[pointer - 1] + add[pointer - 1];
+    }
+
     public void increment(int k, int val) {
         int num = 0;
         if(k >= pointer) num = pointer;
@@ -42,10 +46,14 @@ public class LC1381DesignAStackWithIncrementOperation {
         int mSize = 3;
         LC1381DesignAStackWithIncrementOperation obj = new LC1381DesignAStackWithIncrementOperation(mSize);
         obj.push(3);
+        System.out.println(obj.peek());
         System.out.println(obj.pop());
         obj.push(4);
+        System.out.println(obj.peek());
         obj.push(1);
+        System.out.println(obj.peek());
         obj.increment(2,1);
+        System.out.println(obj.peek());
         System.out.println(obj.pop());
         System.out.println(obj.pop());
     }

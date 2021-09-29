@@ -21,6 +21,7 @@ public class LC647PalindromicSubstrings {
         for(String s : input) {
             int res = countSubstrings(s);
             System.out.println(res);
+
         }
     }
 }
