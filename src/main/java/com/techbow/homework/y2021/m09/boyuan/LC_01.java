@@ -48,6 +48,4 @@ public class LC_01 {
             System.out.println("findSum2: " + findSum2(i) + ", sum: " + sum(i));
         }
     }
-
-
 }
